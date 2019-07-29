@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>List All Events</title>
+
+    <!-- Font Icon -->
+    <link rel="stylesheet" href="../fonts/material-icon/css/material-design-iconic-font.min.css">
+
+    <!--Bootstrap-->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <!-- Main css -->
+    <link rel="stylesheet" href="../css/style.css">
+
+    <!--FIREBASE-->
+    <script src="https://www.gstatic.com/firebasejs/6.3.3/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/6.3.3/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/6.3.3/firebase-database.js"></script>
+</head>
+
+<body>
+    <div class="row">
+        <div class=col-md-6>
+            <div class="container">
+                <div class="signin-content">
+                    <div class="signin-image">
+                        <h3 style="color:cadetblue">ADD New Event</h3>
+                        <form id="add-event-form">
+                            <div class="form-group">
+                                <label for="formGroupExampleInput" style="color:darkblue">Event Name</label>
+                                <br>
+                                <br>
+                                <br>
+                                <input type="text" class="form-control" id="nameInput" name="eventName"
+                                    placeholder="Enter event name...">
+                            </div>
+                            <div class="form-group">
+                                <label for="formGroupExampleInput2" style="color:darkblue">Event Date</label>
+                                <br>
+                                <br>
+                                <br>
+                                <input type="text" class="form-control" id="dateInput" name="eventDate"
+                                    placeholder="Enter event date...">
+                            </div>
+                            <div class="form-group">
+                                <label for="formGroupExampleInput2" style="color:darkblue">Event Description</label>
+                                <br>
+                                <br>
+                                <br>
+                                <input type="text" class="form-control" id="descriptionInput" name="eventDescription"
+                                    placeholder="Enter event description...">
+                            </div>
+                            <div>
+                                <button onclick="return false;" type="button" id="addEvent"
+                                    class="btn btn-info">ADD</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class=col-md-6>
+            <div class="container">
+                <div class="signin-content">
+                    <div class="signin-image">
+                        <h3 style="color:cadetblue">EDIT Event</h3>
+                        <form id="add-event-form">
+                            <!-- <div class="form-group">
+                                <label for="formGroupExampleInput" style="color:darkblue">Event ID</label>
+                                <br>
+                                <br>
+                                <br>
+                                <input type="text" class="form-control" id="edtId" name="eventId"
+                                    placeholder="Enter event Id...">
+                            </div> -->
+                            <div class="form-group">
+                                <label for="formGroupExampleInput" style="color:darkblue">Event Name</label>
+                                <br>
+                                <br>
+                                <br>
+                                <input type="text" class="form-control" id="edtName" name="eventName"
+                                    placeholder="Enter event name...">
+                            </div>
+                            <div class="form-group">
+                                <label for="formGroupExampleInput2" style="color:darkblue">Event Date</label>
+                                <br>
+                                <br>
+                                <br>
+                                <input type="text" class="form-control" id="edtDate" name="eventDate"
+                                    placeholder="Enter event date...">
+                            </div>
+                            <div class="form-group">
+                                <label for="formGroupExampleInput2" style="color:darkblue">Event Description</label>
+                                <br>
+                                <br>
+                                <br>
+                                <input type="text" class="form-control" id="edtDescription" name="eventDescription"
+                                    placeholder="Enter event description...">
+                            </div>
+                            <div>
+                                <button onclick="return false;" type="button" id="editEvent"
+                                    class="btn btn-info">EDIT</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="signup">
+        <div class="container">
+            <div class="signup-content">
+                <div class="signup-form">
+                    <h3 style="color:cadetblue">All Events</h3>
+
+                    <table class="table table-hover" id="dataTable">
+                        <thead>
+                            <tr>
+                                <th scope="col">Event Name</th>
+                                <th scope="col">Event Date</th>
+                                <th scope="col">Event Description</th>
+                                <th scope="col">EDIT</th>
+                                <th scope="col">DELETE</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+
+                        </tbody>
+                    </table>
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
+        </script>
+    <script src="script.js"></script>
+</body>
+
+</html>

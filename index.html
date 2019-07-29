@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Event Viewer Single Page Application</title>
+
+    <!-- Font Icon -->
+    <link rel="stylesheet" href="fonts/material-icon/css/material-design-iconic-font.min.css">
+
+    <!--Bootstrap-->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <!-- Main css -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <header>
+        <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+            <a class="nav-link disabled" href="#"><i class="fa fa-fw fa-home"></i> Home</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault"
+                aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item">
+                        <a class="navbar-brand" href="#">Event Viewer</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <!-- Sign up form -->
+    <main class="signup">
+        <div class="container">
+            <div class="signup-content">
+                <div class="signup-form">
+                    <h2 class="form-title">Sign up</h2>
+                    <form method="POST" class="register-form" id="register-form">
+                        <div class="form-group">
+                            <label for="name"><i class="zmdi zmdi-account material-icons-name"></i></label>
+                            <input type="text" name="name" id="firstName" placeholder="First Name"
+                                required="required" />
+                        </div>
+                        <div class="form-group">
+                            <label for="name"><i class="zmdi zmdi-account material-icons-name"></i></label>
+                            <input type="text" name="name" id="lastName" placeholder="Last Name" required="required" />
+                        </div>
+                        <div class="form-group">
+                            <label for="name"><i class="zmdi zmdi-account material-icons-name"></i></label>
+                            <input type="text" name="name" id="username" placeholder="Username" required="required" />
+                        </div>
+                        <div class="form-group">
+                            <label for="email"><i class="zmdi zmdi-email"></i></label>
+                            <input type="email" name="email" id="email" placeholder="Your Email" required="required" />
+                        </div>
+                        <div class="form-group">
+                            <label for="pass"><i class="zmdi zmdi-lock"></i></label>
+                            <input type="password" name="pass" id="pass" placeholder="Password" required="required" />
+                        </div>
+                        <div class="form-group form-button">
+                            <input type="submit" value="Register" id="rgstr_btn" class="form-submit" />
+                        </div>
+                    </form>
+                    <div style="display: none" id="done">You are successfuly register!</div>
+                </div>
+                <div class="signup-image">
+                    <figure><img src="images/sign-up.png" alt="sing up image"></figure>
+                    <div>I am already member.</div><br><button type="button" class="btn btn-primary"
+                        id="log">LOGIN</button>
+
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer class="page-footer font-small blue">
+        <div class="container">
+            <div class="row d-flex justify-content-center">
+                <div class="col text-center py-3">
+                    <h6>© 2019 Copyright.All Right Reserved.Terms & Conditions </h6>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="main.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>LogIn Page</title>
+
+    <!-- Font Icon -->
+    <link rel="stylesheet" href="../fonts/material-icon/css/material-design-iconic-font.min.css">
+
+    <!-- Main css -->
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body>
+    <!-- Sing in  Form -->
+    <div class="sign-in">
+        <div class="container">
+            <div class="signin-content">
+                <div class="signin-image">
+                    <figure><img src="../images/logIn.png" alt="sing up image"></figure>
+                </div>
+
+                <div class="signin-form">
+                    <h2 class="form-title">Log In</h2>
+                    <form method="POST" class="register-form" id="login-form">
+                        <div class="form-group">
+                            <label for="your_name"><i class="zmdi zmdi-account material-icons-name"></i></label>
+                            <input type="text" id="loginUsername" placeholder="Username" />
+                        </div>
+                        <div class="form-group">
+                            <label for="your_pass"><i class="zmdi zmdi-lock"></i></label>
+                            <input type="password" id="loginPassword" placeholder="Password" />
+                        </div>
+                        <div class="form-group form-button">
+                            <input type="submit" value="Login" id="login_btn" class="form-submit" />
+                        </div>
+                    </form>
+                    <div style="display: none" id="incorect">Incorect Username or Password.Try Again!</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
+        </script>
+    <script src="../vendor/jquery/jquery.min.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
